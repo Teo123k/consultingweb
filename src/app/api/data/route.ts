@@ -33,23 +33,17 @@ const NavLinkData: NavLinkType[] = [
 ]
 
 const ProjectData = [
-  {
-    id: 1,
-    title: 'High-volume street food operations',
+  {    title: 'High-volume street food operations',
     desc: 'Multiple street food concepts, permanent venues, pop-ups, and major food festivals in London.',
     coverImg: '/images/work/streetfood/street-01.jpg',
     link: '/work',
   },
-  {
-    id: 2,
-    title: 'Restaurant concept & menu development',
+  {    title: 'Restaurant concept & menu development',
     desc: 'Modern Korean restaurant concept in Vienna focused on menu structure and execution clarity.',
     coverImg: '/images/work/vienna/vienna-01.jpg',
     link: '/work',
   },
-  {
-    id: 3,
-    title: 'Touring & international catering',
+  {    title: 'Touring & international catering',
     desc: 'Korean catering for international K-pop tours across multiple countries.',
     coverImg: '/images/work/touring/tour-01.jpg',
     link: '/work',
