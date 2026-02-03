@@ -32,7 +32,7 @@ const NavLinkData: NavLinkType[] = [
   { label: 'About', href: '/about' },
 ]
 
-const ProjectData: ProjectType[] = [
+const ProjectData = [
   {
     id: 1,
     title: 'High-volume street food operations',
