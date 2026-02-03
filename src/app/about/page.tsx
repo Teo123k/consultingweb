@@ -19,10 +19,10 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <main className="container pt-20 pb-20">
+    <main className="container pt-20 pb-20 px-4 lg:px-8">
       <div className="mx-auto max-w-5xl">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12 mt-6">
           <h1 className="text-5xl font-bold text-neutral-900 dark:text-white">About Cabij & Co</h1>
           <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">
             Restaurant consulting grounded in real kitchen experience.
