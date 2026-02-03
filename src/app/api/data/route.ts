@@ -43,11 +43,11 @@ const WorkItems = [
   },
 ]
 
-const RecordData = []
+const RecordData: any[] = []
 
-const ReviewData = []
+const ReviewData: any[] = []
 
-const SpecializeData = [
+const SpecializeData: any[] = [
   {
     imgSrc: '/images/specialization/webdesign.svg',
     title: 'Restaurant menu design',
@@ -66,9 +66,9 @@ const SpecializeData = [
 ]
 
 
-const PlanData = []
+const PlanData: any[] = []
 
-const CategoryData = [
+const CategoryData: any[] = [
   {
     imgSrc: '/images/category/webdev.webp',
     title: 'Web Design',
