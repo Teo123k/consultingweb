@@ -1,0 +1,130 @@
+'use client'
+
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+
+export default function AboutPage() {
+  const [imageExists, setImageExists] = useState(true)
+
+  useEffect(() => {
+    const checkImage = async () => {
+      try {
+        const res = await fetch('/images/about/teo.jpg', { method: 'HEAD' })
+        setImageExists(res.ok)
+      } catch {
+        setImageExists(false)
+      }
+    }
+    checkImage()
+  }, [])
+
+  return (
+    <main className="container pt-20 pb-20">
+      <div className="mx-auto max-w-5xl">
+        {/* Header */}
+        <div className="mb-12">
+          <h1 className="text-5xl font-bold text-neutral-900 dark:text-white">About Cabij & Co</h1>
+          <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">
+            Restaurant consulting grounded in real kitchen experience.
+          </p>
+        </div>
+
+        {/* Main content grid */}
+        <div className="grid gap-12 md:grid-cols-12">
+          {/* Left: Text content */}
+          <div className="md:col-span-7">
+            {/* Who I am */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Who I Am</h2>
+              <p className="mt-4 text-neutral-700 dark:text-neutral-300">
+                I'm Teo, founder of Cabij & Co. My work focuses on helping restaurants improve menus, streamline operations, and implement practical automation.
+              </p>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+                Everything I recommend comes from hands-on experience running kitchens under pressure—where small inefficiencies become real losses.
+              </p>
+            </section>
+
+            {/* Experience */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Experience</h2>
+              <ul className="mt-4 space-y-3 text-neutral-700 dark:text-neutral-300">
+                <li>
+                  <strong className="text-neutral-900 dark:text-white">London:</strong> Built and operated street food concepts across venues, pop-ups, and festivals.
+                </li>
+                <li>
+                  <strong className="text-neutral-900 dark:text-white">Vienna:</strong> Developed a restaurant concept focused on Korean cuisine, menu structure, and operational systems.
+                </li>
+                <li>
+                  <strong className="text-neutral-900 dark:text-white">International:</strong> Managed catering logistics for touring operations across multiple countries.
+                </li>
+              </ul>
+            </section>
+
+            {/* What I do */}
+            <section>
+              <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">What I Offer</h2>
+              <p className="mt-4 text-neutral-700 dark:text-neutral-300">
+                Menu design that drives margins. Operations that actually work. Automation that teams use.
+              </p>
+              <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+                I don't apply generic frameworks. Every recommendation is shaped by how real kitchens operate.
+              </p>
+            </section>
+          </div>
+
+          {/* Right: Portrait */}
+          <div className="md:col-span-5">
+            {imageExists ? (
+              <div className="sticky top-32">
+                <div className="overflow-hidden rounded-3xl border border-neutral-200 dark:border-neutral-800">
+                  <div className="relative aspect-[3/4] w-full bg-neutral-100 dark:bg-neutral-900">
+                    <Image
+                      src="/images/about/teo.jpg"
+                      alt="Teo, founder of Cabij & Co"
+                      fill
+                      className="object-cover"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 40vw"
+                    />
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="sticky top-32">
+                <div className="rounded-3xl border-2 border-dashed border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 p-8">
+                  <div className="aspect-[3/4] flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-4xl mb-3">📸</div>
+                      <p className="text-sm text-neutral-600 dark:text-neutral-400 font-medium">
+                        Portrait image not found
+                      </p>
+                      <p className="text-xs text-neutral-500 dark:text-neutral-500 mt-2">
+                        Place portrait at:<br />
+                        <code className="bg-neutral-200 dark:bg-neutral-800 px-2 py-1 rounded text-xs mt-1 inline-block">
+                          /public/images/about/teo.jpg
+                        </code>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="mt-20 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 p-8 hover:shadow-md transition-shadow">
+          <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Let's work together</h2>
+          <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+            Whether it's menu clarity, operational systems, or automation, let's start with a conversation.
+          </p>
+          <p className="mt-4 font-medium">
+            <a href="/#contact" className="text-neutral-900 dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 underline transition-colors">
+              Start a conversation →
+            </a>
+          </p>
+        </div>
+      </div>
+    </main>
+  )
+}
