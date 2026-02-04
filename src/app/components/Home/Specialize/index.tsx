@@ -26,7 +26,7 @@ const Specialize = () => {
   }, [])
 
   return (
-    <section id='expertise' className='scroll-mt-12 mt-12 -mx-4 px-4 py-12 bg-white dark:bg-neutral-900/20'>
+    <section id='expertise' className='scroll-mt-12 mt-12 -mx-4 px-4 py-12 bg-sage dark:bg-neutral-900/20'>
       <div className='container'>
         <div className='text-center mb-8'>
           <h2 className='text-4xl font-semibold mb-6'>What I offer</h2>
@@ -42,7 +42,7 @@ const Specialize = () => {
               ))
             : specialization.map((item, i) => (
                 <div key={i}>
-                  <div className='rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900/50 p-7 transition-all hover:shadow-md hover:border-neutral-300 dark:hover:border-neutral-600'>
+                  <div className='rounded-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900/50 p-7 transition-all hover:shadow-md hover:border-neutral-300 dark:hover:border-neutral-600'>
                     <div className='p-3 rounded-lg bg-primary w-fit mb-8 shadow-lg shadow-primary/30'>
                       <Image
                         src={item.imgSrc}

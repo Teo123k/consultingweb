@@ -1,11 +1,17 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Logo = () => {
   return (
     <Link href='/'>
-      <span className="text-xl font-semibold tracking-tight">
-        Cabij & co
-      </span>
+      <Image
+        src='/images/brand/logo.png'
+        alt='Cabij & co'
+        width={150}
+        height={150}
+        priority
+        className='h-auto'
+      />
     </Link>
   )
 }

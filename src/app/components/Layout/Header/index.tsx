@@ -80,7 +80,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={`fixed top-0 py-1 z-50 w-full bg-transparent transition-all ${
-        sticky ? 'shadow-lg dark:shadow-neutral-50/5 bg-white dark:bg-darklight' : 'shadow-none'
+        sticky ? 'shadow-lg dark:shadow-neutral-50/5 bg-sage dark:bg-darklight' : 'shadow-none'
       }`}>
       <div
         className={`container flex items-center justify-between gap-10 duration-300  ${

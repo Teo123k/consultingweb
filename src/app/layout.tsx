@@ -18,12 +18,9 @@ export const metadata: Metadata = {
   },
   description:
     'Restaurant consulting focused on menu clarity, operational systems, and practical support for food businesses.',
-  icons: [
-    {
-      rel: 'icon',
-      url: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231f2937" rx="8"/><text x="50" y="65" font-size="70" font-weight="600" fill="%23ffffff" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" letter-spacing="-1">C</text></svg>',
-    },
-  ],
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
@@ -33,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${DMSans.variable} antialiased dark:bg-darkmode`}>
+      <body className={`${DMSans.variable} antialiased bg-sage dark:bg-darkmode`}>
         <ThemeProvider
           attribute='class'
           enableSystem={false}
