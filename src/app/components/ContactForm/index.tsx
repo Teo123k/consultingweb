@@ -28,11 +28,13 @@ const ContactForm = () => {
     }))
   }
   const reset = () => {
-    formData.firstname = ''
-    formData.lastname = ''
-    formData.email = ''
-    formData.phnumber = ''
-    formData.Message = ''
+    setFormData({
+      firstname: '',
+      lastname: '',
+      email: '',
+      phnumber: '',
+      Message: '',
+    })
   }
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -51,6 +53,7 @@ const ContactForm = () => {
     })
       .then((response) => response.json())
       .then((data) => {
+        setLoader(false)
         if (data.success) {
           setShowThanks(true)
           reset()
@@ -59,8 +62,6 @@ const ContactForm = () => {
             setShowThanks(false)
           }, 5000)
         }
-
-        reset()
       })
       .catch((error) => {
         setLoader(false)
