@@ -4,18 +4,17 @@ import Image from 'next/image'
 
 export default function AboutPage() {
   return (
-    <main className="container pt-20 pb-20">
-      <div className="mx-auto max-w-5xl">
-        {/* Header */}
-        <div className="mb-12">
-          <h1 className="text-5xl font-bold text-neutral-900 dark:text-white">About Cabij & Co</h1>
-          <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">
-            Restaurant consulting grounded in real kitchen experience.
-          </p>
-        </div>
+    <main className="container pt-40 pb-20">
+      {/* Header */}
+      <div className="mb-12">
+        <h1 className="text-5xl font-bold text-neutral-900 dark:text-white">About Cabij & Co</h1>
+        <p className="mt-3 text-lg text-neutral-600 dark:text-neutral-400">
+          Restaurant consulting grounded in real kitchen experience.
+        </p>
+      </div>
 
-        {/* Main content grid */}
-        <div className="grid gap-12 md:grid-cols-12">
+      {/* Main content grid */}
+      <div className="grid gap-12 md:grid-cols-12">
           {/* Left: Text content */}
           <div className="md:col-span-7">
             {/* Who I am */}
@@ -74,18 +73,16 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="mt-20 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 p-8 hover:shadow-md transition-shadow">
-          <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Let's work together</h2>
-          <p className="mt-3 text-neutral-700 dark:text-neutral-300">
-            Whether it's menu clarity, operational systems, or automation, let's start with a conversation.
-          </p>
-          <p className="mt-4 font-medium">
-            <a href="/#contact" className="text-neutral-900 dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 underline transition-colors">
-              Start a conversation →
-            </a>
-          </p>
-        </div>
+      <div className="mt-20 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 p-8 hover:shadow-md transition-shadow">
+        <h2 className="text-2xl font-semibold text-neutral-900 dark:text-white">Let's work together</h2>
+        <p className="mt-3 text-neutral-700 dark:text-neutral-300">
+          Whether it's menu clarity, operational systems, or automation, let's start with a conversation.
+        </p>
+        <p className="mt-4 font-medium">
+          <a href="/#contact" className="text-neutral-900 dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 underline transition-colors">
+            Start a conversation →
+          </a>
+        </p>
       </div>
     </main>
   )
