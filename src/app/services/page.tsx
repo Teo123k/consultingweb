@@ -1,6 +1,6 @@
 export default function ServicesPage() {
   return (
-    <main className="container pt-40 pb-20">
+    <main className="container pt-60 pb-20">
       <h1 className="text-5xl font-bold">Services</h1>
 
       <p className="mt-6 max-w-2xl text-lg opacity-80">

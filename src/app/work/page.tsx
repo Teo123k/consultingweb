@@ -90,7 +90,7 @@ export default function WorkPage() {
   ]
 
   return (
-    <main className="container pt-40 pb-20">
+    <main className="container pt-60 pb-20">
       <h1 className="text-5xl font-bold text-neutral-900 dark:text-white">Work</h1>
 
       <p className="mt-6 max-w-3xl text-lg text-neutral-700 dark:text-neutral-300">

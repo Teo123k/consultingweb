@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container py-10">
         <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-3">
           <div>
-            <div className="flex flex-col items-start">
+            <div className="flex flex-col items-start -ml-10">
               <Link href='/'>
                 <Image
                   src='/images/brand/logo.png'
@@ -20,7 +20,7 @@ export default function Footer() {
                   className='h-auto'
                 />
               </Link>
-              <p className="text-sm opacity-70 max-w-xs -mt-8">
+              <p className="text-sm opacity-70 max-w-xs -mt-10">
                 Restaurant consulting for menu clarity, operational systems, and practical automation.
               </p>
             </div>

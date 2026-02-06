@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function AboutPage() {
   return (
-    <main className="container pt-40 pb-20">
+    <main className="container pt-60 pb-20">
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-5xl font-bold text-neutral-900 dark:text-white">About Cabij & Co</h1>
